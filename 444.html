@@ -7,20 +7,17 @@
 <script type="text/javascript"> 
 function checkAll()
 {
-	var a=document.getElementsByTagName("input");
+	var a=document.getElementsByName("test");
 	for (i = 0; i < a.length; i++)
 	a[i].checked = true ;
 }
-function post()
+function uncheckAll()
 {
-	var lens = document.getElementsByName("input").length;
-for(var i=0;i<lens;i++){ 
-if(lens[i].checked==true){
-//得到选中的单选按钮如果要得到值 那么可以：
-alert(document.getElementsByName[i].value);//弹出选中单选按钮的值
+	var a=document.getElementsByName("test");
+	for (i = 0; i < a.length; i++)
+	a[i].checked = false ;
 }
-}
-}
+
 
 </script> 
 
@@ -35,7 +32,8 @@ alert(document.getElementsByName[i].value);//弹出选中单选按钮的值
 <p><input type="checkbox" name="test" value="4" /></p>
 <p>
 <input type="button" name="all" value="全選" onclick="checkAll()"/>
-<input type="button" name="post" value="送出" onclick="post()"/></p> 
+<input type="button" name="cancel" value="全取消" onclick="uncheckAll()"/>
+</p> 
 
 </form>
 </body>
