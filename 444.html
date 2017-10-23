@@ -17,7 +17,11 @@ function uncheckAll()
 	for (i = 0; i < a.length; i++)
 	a[i].checked = false ;
 }
-
+function sent()
+{
+	var a=document.getElementsByName("test");
+	alert(a.value);
+}wwwww
 
 </script> 
 
@@ -26,13 +30,14 @@ function uncheckAll()
 <body>
 <form id="form1" name="form1" method="post" action="">
   
-<p><input type="checkbox" name="test" value="1"></p> 
-<p><input type="checkbox" name="test" value="2" /></p> 
-<p><input type="checkbox" name="test" value="3" /></p> 
-<p><input type="checkbox" name="test" value="4" /></p>
+<p><input type="checkbox" name="test" value="1">111</p> 
+<p><input type="checkbox" name="test" value="2" />222</p> 
+<p><input type="checkbox" name="test" value="3" />333</p> 
+<p><input type="checkbox" name="test" value="4" />444</p>
 <p>
 <input type="button" name="all" value="全選" onclick="checkAll()"/>
 <input type="button" name="cancel" value="全取消" onclick="uncheckAll()"/>
+<input type="submit" name="sent" value="送出" onclick="sent()"/>
 </p> 
 
 </form>
